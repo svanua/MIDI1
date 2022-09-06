@@ -13,7 +13,7 @@
   TaskHandle_t xHandle_MidiServer          =NULL; // Task MIDI IN/OUT
 
   TaskHandle_t xHandle_MIDI_SMART          =NULL; // SMART MIDI EVENT
-
+// Chizhik commentariy
 void setup()
 {
      Serial.begin (115200);
