@@ -81,6 +81,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -89,6 +90,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -97,6 +99,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -105,6 +108,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -129,6 +133,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                300,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -137,6 +142,7 @@ void MIDI_SMART (void *parametrs)
                 90,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                100,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -145,6 +151,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -153,6 +160,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -178,6 +186,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                360,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -186,6 +195,7 @@ void MIDI_SMART (void *parametrs)
                 110,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                500,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -194,6 +204,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -202,6 +213,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -227,6 +239,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -235,6 +248,7 @@ void MIDI_SMART (void *parametrs)
                 120,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -243,6 +257,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -251,6 +266,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -276,6 +292,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -284,6 +301,7 @@ void MIDI_SMART (void *parametrs)
                 120,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -292,6 +310,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -300,6 +319,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -325,6 +345,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -333,6 +354,7 @@ void MIDI_SMART (void *parametrs)
                 120,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -341,6 +363,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -349,6 +372,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -374,6 +398,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -382,6 +407,7 @@ void MIDI_SMART (void *parametrs)
                 120,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -390,6 +416,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -398,6 +425,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -424,6 +452,7 @@ void MIDI_SMART (void *parametrs)
                 100,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note2------------
@@ -432,6 +461,7 @@ void MIDI_SMART (void *parametrs)
                 120,        //  Vel max Note1 
                 10,         //  Note2 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note3------------
@@ -440,6 +470,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note3 
                 10,         //  Note3 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 //---------- Note4------------
@@ -448,6 +479,7 @@ void MIDI_SMART (void *parametrs)
                 127,        //  Vel max Note1 
                 10,         //  Note1 send to ch 
                 0,
+                200,
                 //----------Note1 END --------
 
                 // ---------- note common-------------
@@ -511,7 +543,7 @@ MES_MIDI SMART_EVENT_FINDER (MES_MIDI Smart_mes)
                                         Out_smart_mes.Data1= Base_pads[i].Note1;
                                         Base_pads[i].Last_on_Note1 = millis();           // last time input pad ms
                                         Out_smart_mes.Data2= (uint8_t) ((float_t)Base_pads[i].Note1_vel1/Base_pads[i].Vel1 *Out_smart_mes.Data2);
-                                         
+                                         Base_pads[i].Lenght_pad_min = Base_pads[i].Lenght_Note_1;
                                           Serial.println ( Out_smart_mes.Data2);
                                         // Base_pads[i].Last_Smart_noteOn = Out_smart_mes.Data1;
 
@@ -522,6 +554,7 @@ MES_MIDI SMART_EVENT_FINDER (MES_MIDI Smart_mes)
                                         Min_vel=Base_pads[i].Vel1;
                                          if (Out_smart_mes.Data2>Min_vel && Out_smart_mes.Data2<= Base_pads[i].Vel2) 
                                             {
+                                                Base_pads[i].Lenght_pad_min = Base_pads[i].Lenght_Note_2;
                                             Serial.println ("range_2");
 
                                             Serial.println (Out_smart_mes.Data2);
@@ -539,6 +572,7 @@ MES_MIDI SMART_EVENT_FINDER (MES_MIDI Smart_mes)
                                                     Min_vel=Base_pads[i].Vel2;
                                                     if (Out_smart_mes.Data2>Min_vel && Out_smart_mes.Data2<= Base_pads[i].Vel3) 
                                                         {
+                                                            Base_pads[i].Lenght_pad_min = Base_pads[i].Lenght_Note_3;
 
 
 
@@ -547,7 +581,7 @@ MES_MIDI SMART_EVENT_FINDER (MES_MIDI Smart_mes)
                                                              {
                                                                 Min_vel=Base_pads[i].Vel3;
                                                                 if (Out_smart_mes.Data2>Min_vel && Out_smart_mes.Data2<= Base_pads[i].Vel4) 
-                                                                {
+                                                                { Base_pads[i].Lenght_pad_min = Base_pads[i].Lenght_Note_4;
 
 
 
