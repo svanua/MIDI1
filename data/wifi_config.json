@@ -1,0 +1,8 @@
+{
+    "WiFi_mode":"STA",
+    "WiFi_STA_ssid":"VG_MAIN_LAN",
+    "WiFi_STA_password":"vist2015",
+    "WiFi_AP_ssid":"MIDI_SRV",
+    "WiFi_AP_password":"vist2015",
+    "WiFi_wait_connect": 90
+}

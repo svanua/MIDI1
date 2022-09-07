@@ -2,6 +2,7 @@
 #include <MIDIServer.h>
 //#include <MIDI.h>
 #include <MIDI_SMART.h>
+#include <ESP32_WEB.h>
 
 
 // Simple tutorial on how to receive and send MIDI messages.
@@ -17,8 +18,7 @@
 void setup()
 {
      Serial.begin (115200);
-
-
+     ESP32_WEB_init();
 
       xTaskCreatePinnedToCore(
         MIDIserver

@@ -6,6 +6,9 @@
         "istream": "cpp",
         "limits": "cpp",
         "sstream": "cpp",
-        "streambuf": "cpp"
+        "streambuf": "cpp",
+        "esp32_web.h": "c",
+        "esp32_fsbrowser.h": "c",
+        "webserver.h": "c"
     }
 }
