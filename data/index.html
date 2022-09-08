@@ -11,23 +11,36 @@
     <header class="page-header">
         <p>MIDI<span>SERVER</span></p>
     </header>
-    <div id="current_profile">
-
-    <button onclick="start_read">start</button>
-
-    <p>opppppp</p>
-  <input type="text">
-        
+    <div id="profiles">
+        <ul id="list_profiles">
+           
+        </ul>       
     </div>
-
 
     <div id="PAD1">
-
+        <label for="pad1_Name_pad_input">Name_pad</label>
+            <input type="text" value="name" name="pad1_Name_pad_input">
+        <label for="pad1_Note">Note</label>
+            <input type="number" value="0"  name="pad1_Note">
+        <label for="pad1_Vel_note_min">Vel_note_min</label>
+            <input type="number" value="0"  name="pad1_Vel_note_min">
+        <label for="pad1_Lenght_pad_min">Lenght_pad_min</label>
+            <input type="number" value="0"  name="pad1_Lenght_pad_min">
+        <label for="pad1_Note_common">Note_common</label>
+            <input type="number" value="0"  name="pad1_Note_common">
+        <label for="pad1_Note_common_vel">Note_common_vel</label>
+            <input type="number" value="0"  name="pad1_Note_common_vel">
+        <label for="pad1_Mapping_THRUE">Mapping</label>
+            <input type="checkbox" checked="true" name="pad1_Mapping_THRUE">
     </div>
 
-
     <div id="PAD2">
-
+        <div class="mapping">
+            <div id="mapping_vel1">wait load</div>
+            <div id="mapping_vel2">wait load</div>
+            <div id="mapping_vel3">wait load</div>
+            <div id="mapping_vel4">wait load</div>
+        </div>
 
     </div>
 

@@ -3,6 +3,9 @@
 	margin:0;
 	
 }
+body{
+    background-color: rgb(69 163 180);
+}
 .page-header{
     padding-left: 20px;
     color: darkorange; 
@@ -16,24 +19,98 @@
     color: white; 
 }
 
-#current_profile{
-    width: 100%;
+#profiles{
+    width: 80%;
     height: 200px;
     background-color: rgb(69 163 180);
 }
-#current_profile button{
-    width: 10%;
-    height: 40px;
-    /*padding:0;*/
-	margin-left:20px;
-    margin-top: 20px;
-    background-color: rgb(180, 132, 69);
-
+#list_profiles{
+    width: 90%;
+    height: 188px;
+    margin: auto;
+    border: 1px solid rgb(131 0 2);
+    padding-top: 10px;
 
 }
+#profiles li.active_profile {
+    background-color:rgb(255 140 0) !important;
+}
+#profiles li.profile_load {
+    background-color:rgb(115 69 30);
+}
 
-#current_profile button:hover{
-    background-color: rgb(69, 180, 102);
+#profiles li.profile_no_load {
+    background-color:rgb(165 163 161);
+}
+#profiles li{
+    float: left;
+    width: 8%;
+    height: 80px;
+    line-height: 80px;
+    list-style: none;
+    border: 1px solid rgb(0 111 131);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;  
+    /*font-style: italic;*/
+    font-weight: 700;
+    color: white;
+}
+#PAD1 {
+    padding: 30px;
+    background-color: #45a3b4;
+    width: 250px;
+    float: left;
+}
+#PAD1 input{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#PAD1 input[type="text"], input[type="number"]{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(0 111 131);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;  
+    font-weight: 600;
+}
+#PAD2 input[type="number"] {
+    width:  140px;
+}
+
+#PAD1 input[type="number"]{
+    margin-left: 100px;
+    width: 140px;
+}
+#PAD2 {
+    margin-left: 25%;
+}
+#PAD1 input[type="checkbox"]{
+    width: 40px;
+    height: 40px;
+}
+#PAD1 label,#PAD2 label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;  
+    /*font-style: italic;*/
+    font-weight: 700;
+    color: rgb(0 111 131);
+}
 
 
+#PAD2 label{
+    margin-top: 10px;
+    display: block;
+}
+
+#mapping_vel1,#mapping_vel2,#mapping_vel3,#mapping_vel4{
+    float: left;
+    width: 250px;
+    background-color: #45a3b4;
+    padding: 90px 30px;
 }
