@@ -21,3 +21,19 @@
     height: 200px;
     background-color: rgb(69 163 180);
 }
+#current_profile button{
+    width: 10%;
+    height: 40px;
+    /*padding:0;*/
+	margin-left:20px;
+    margin-top: 20px;
+    background-color: rgb(180, 132, 69);
+
+
+}
+
+#current_profile button:hover{
+    background-color: rgb(69, 180, 102);
+
+
+}
