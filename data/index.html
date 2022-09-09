@@ -13,25 +13,27 @@
     </header>
     <div id="profiles">
         <ul id="list_profiles">
-           
+            <li name="li_profile_1" class="active_profile profile_load" index="1" onclick="set_active_profile_midi(index)" >p1</li>
+
+            <li name="li_profile_0" class="profile_load" >p1</li>
         </ul>       
     </div>
 
     <div id="PAD1">
         <label for="Name_pad_input">Name_pad</label>
-            <input type="text" value="name" name="Name_pad_input" maxlength="10">
+            <input type="text" value="name" name="Name_pad_input" maxlength="10" onchange="input_change_value('Name_pad_input')">
         <label for="Note">Note</label>
-            <input type="number" value="0"  name="Note">
+            <input type="number" value="0"  name="Note" onchange="input_change_value('Note')">
         <label for="Vel_note_min">Vel_note_min</label>
-            <input type="number" value="0"  name="Vel_note_min">
+            <input type="number" value="0"  name="Vel_note_min" onchange="input_change_value('Vel_note_min')">
         <label for="Lenght_pad_min">Lenght_pad_min</label>
-            <input type="number" value="0"  name="Lenght_pad_min">
+            <input type="number" value="0"  name="Lenght_pad_min" onchange="input_change_value('Lenght_pad_min')">
         <label for="Note_common">Note_common</label>
-            <input type="number" value="0"  name="Note_common">
+            <input type="number" value="0"  name="Note_common" onchange="input_change_value('Note_common')">
         <label for="Note_common_vel">Note_common_vel</label>
-            <input type="number" value="0"  name="Note_common_vel">
+            <input type="number" value="0"  name="Note_common_vel" onchange="input_change_value('Note_common_vel')">
         <label for="Mapping_THRUE">Mapping</label>
-            <input type="checkbox" checked="true" name="Mapping_THRUE">
+            <input type="checkbox" checked="true" name="Mapping_THRUE" onchange="input_change_value('Mapping_THRUE')">
     </div>
 
     <div id="PAD2">

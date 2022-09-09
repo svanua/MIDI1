@@ -15,6 +15,29 @@ void ESP32_HTTP_init(){
     (*_server).send(200,"text/plain", FS_Read_midi_list());
   });
 
+  (*_server).on("/profile_save",HTTP_POST, []() {
+   // Serial.printf("arg1 %s \narg2 %s\n",(*_server).arg(0).c_str(),(*_server).arg(1).c_str());
+    bool fs_save = FS_Write_file("/"+(*_server).arg(0),(*_server).arg(1));
+    if (fs_save) (*_server).send(200,"text/plain","Profile "+(*_server).arg(0) +" saved!" );
+    else {
+      (*_server).send(404,"text/plain","Profile "+(*_server).arg(0) +" falied!" );
+    }
+  });
+   (*_server).on("/profile_remove",HTTP_GET, []() {
+    
+      Serial.printf("profile_remove arg1 /%s \n",(*_server).arg(0).c_str());
+      bool result_remove = false;
+      (*_server).send(200,"text/plain",result_remove ? "true" : "false" );
+   });
+
+  (*_server).on("/profile_add",HTTP_GET, []() {
+    
+      Serial.printf("profile_add arg1 /%s \n",(*_server).arg(0).c_str());
+      bool result_remove = false;
+      (*_server).send(200,"text/plain",result_remove ? "true" : "false" );
+   });
+
+  
    (*_server).on("/get_profile", HTTP_GET, []() {
     
     // for (size_t i = 0; i <  (*_server).args(); i++)
