@@ -21,9 +21,9 @@ String formatBytes(size_t bytes);
 String getContentType(String filename);
 bool exists(String path);
 
+void handleNotFound();
 bool handleFileRead(String path);
 void handleFileDelete();
 void handleFileCreate();
 void handleFileList();
 
-bool FS_Write_file(String filename,String json_str);

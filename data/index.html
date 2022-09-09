@@ -18,24 +18,24 @@
     </div>
 
     <div id="PAD1">
-        <label for="pad1_Name_pad_input">Name_pad</label>
-            <input type="text" value="name" name="pad1_Name_pad_input">
-        <label for="pad1_Note">Note</label>
-            <input type="number" value="0"  name="pad1_Note">
-        <label for="pad1_Vel_note_min">Vel_note_min</label>
-            <input type="number" value="0"  name="pad1_Vel_note_min">
-        <label for="pad1_Lenght_pad_min">Lenght_pad_min</label>
-            <input type="number" value="0"  name="pad1_Lenght_pad_min">
-        <label for="pad1_Note_common">Note_common</label>
-            <input type="number" value="0"  name="pad1_Note_common">
-        <label for="pad1_Note_common_vel">Note_common_vel</label>
-            <input type="number" value="0"  name="pad1_Note_common_vel">
-        <label for="pad1_Mapping_THRUE">Mapping</label>
-            <input type="checkbox" checked="true" name="pad1_Mapping_THRUE">
+        <label for="Name_pad_input">Name_pad</label>
+            <input type="text" value="name" name="Name_pad_input" maxlength="10">
+        <label for="Note">Note</label>
+            <input type="number" value="0"  name="Note">
+        <label for="Vel_note_min">Vel_note_min</label>
+            <input type="number" value="0"  name="Vel_note_min">
+        <label for="Lenght_pad_min">Lenght_pad_min</label>
+            <input type="number" value="0"  name="Lenght_pad_min">
+        <label for="Note_common">Note_common</label>
+            <input type="number" value="0"  name="Note_common">
+        <label for="Note_common_vel">Note_common_vel</label>
+            <input type="number" value="0"  name="Note_common_vel">
+        <label for="Mapping_THRUE">Mapping</label>
+            <input type="checkbox" checked="true" name="Mapping_THRUE">
     </div>
 
     <div id="PAD2">
-        <div class="mapping">
+        <div id="mapping">
             <div id="mapping_vel1">wait load</div>
             <div id="mapping_vel2">wait load</div>
             <div id="mapping_vel3">wait load</div>
@@ -43,7 +43,22 @@
         </div>
 
     </div>
+    <div id="menu_profiles">
+        <select name="file" id="select_list_profiles" onchange="select_profile(this.value)">
+            <option disabled>Выбирете профиль</option>
+            <option selected>profile1_chjzjk.json</option>
+            <option>profile2.json</option>
+        </select>
+        <div id="panel_btn">
+          <input id="btn_add"   type="submit" value="Добавить" onclick="profile_add()">
+          <input id="btn_save"   type="button" value="Сохранить"  onclick="profile_save()">
+          <input id="btn_delete" type="button" value="Удалить"      onclick="profile_remove()">
+        </div>
+    </div>
 
+    <!-- <form id="load_profiles" method="GET" action="get_profile">
+        
+    </form> -->
 
     <script src="function.js" type="text/javascript" ></script>
 </body>

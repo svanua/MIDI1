@@ -54,6 +54,8 @@ String getContentType(String filename) {
     return "image/x-icon";
   } else if (filename.endsWith(".xml")) {
     return "text/xml";
+  } else if (filename.endsWith(".json")) {
+    return "text/json";  
   } else if (filename.endsWith(".pdf")) {
     return "application/x-pdf";
   } else if (filename.endsWith(".zip")) {
@@ -74,8 +76,25 @@ bool exists(String path){
   return yes;
 }
 
+void handleNotFound() {
+  if (!handleFileRead((*_server).uri())) {
+       String message = "File Not Found\n\n";
+        message += "URI: ";
+        message += (*_server).uri();
+        message += "\nMethod: ";
+        message += ((*_server).method() == HTTP_GET) ? "GET" : "POST";
+        message += "\nArguments: ";
+        message += (*_server).args();
+        message += "\n";
+        for (uint8_t i = 0; i < (*_server).args(); i++) {
+          message += " " + (*_server).argName(i) + ": " + (*_server).arg(i) + "\n";
+        }
+        (*_server).send(404, "text/plain", message);
+    }
+}
+
 bool handleFileRead(String path) {
-  //// Serial.println("handleFileRead: " + path);
+  //Serial.println("handleFileRead: " + path);
   if (path.endsWith("/")) {
     path += "index.htm";
   }
@@ -191,22 +210,4 @@ void handleFileList() {
   (*_server).send(200, "text/json", output);
 }
 
-bool FS_Write_file(String filename,String json_str)
-{ 
- File file = FILESYSTEM.open(filename, FILE_WRITE,false);
- if(!file) { Serial.println("[FLASH] Error open file to write"); return false;}
- else { 
-      try
-      {
-        file.print(json_str.c_str());
-      }
-      catch(const std::exception& e)
-      {
-      Serial.println("[FLASH] Write" + filename);
-      }  
-  }
- file.close();
 
- 
- return true;
-}

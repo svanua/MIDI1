@@ -62,8 +62,8 @@ body{
 #PAD1 {
     padding: 30px;
     background-color: #45a3b4;
-    width: 250px;
     float: left;
+    width: 20%;
 }
 #PAD1 input{
     display: block;
@@ -76,11 +76,13 @@ body{
     text-align: center;
     color: rgb(0 111 131);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;  
+    font-size: 25px;
     font-weight: 600;
+    width: 245px;
 }
 #PAD2 input[type="number"] {
     width:  140px;
+    margin: 5px auto;
 }
 
 #PAD1 input[type="number"]{
@@ -88,7 +90,9 @@ body{
     width: 140px;
 }
 #PAD2 {
-    margin-left: 25%;
+    margin-top: 20px;
+    /* margin-left: 20%; */
+    float: left;
 }
 #PAD1 input[type="checkbox"]{
     width: 40px;
@@ -102,15 +106,51 @@ body{
     color: rgb(0 111 131);
 }
 
-
 #PAD2 label{
     margin-top: 10px;
     display: block;
 }
-
+#mapping {
+    height: 535px;
+}
 #mapping_vel1,#mapping_vel2,#mapping_vel3,#mapping_vel4{
     float: left;
-    width: 250px;
+    padding: 20px;
     background-color: #45a3b4;
-    padding: 90px 30px;
+}
+#menu_profiles{
+    padding-top: 20px;
+}
+
+#menu_profiles{
+    padding-top: 20px;
+    /* width: 360px; */
+}
+
+
+#menu_profiles select{
+    padding-top: 20px;
+    line-height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;  
+    /*font-style: italic;*/
+    font-weight: 700;
+    color: rgb(0 111 131);
+    width: 250px;
+    display: block;
+}
+#menu_profiles input{
+    font-weight: 700;
+    width: 250px;
+    line-height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #286a76;
+    color: white;
+}
+#panel_btn {
+    
+/* width: 251px; */
 }

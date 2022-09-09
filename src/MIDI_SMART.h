@@ -6,6 +6,7 @@
 
 void MIDI_SMART (void *parametrs);
 MES_MIDI SMART_EVENT_FINDER (MES_MIDI Smart_mes);
+
 struct Note_Mapping 
             {// input data
 

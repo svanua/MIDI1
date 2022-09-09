@@ -9,6 +9,7 @@
         "streambuf": "cpp",
         "esp32_web.h": "c",
         "esp32_fsbrowser.h": "c",
-        "webserver.h": "c"
+        "webserver.h": "c",
+        "string": "cpp"
     }
 }

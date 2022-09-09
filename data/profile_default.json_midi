@@ -1,0 +1,33 @@
+{
+    "Name_pad_input":"default",
+    "Note": 24,                
+    "Vel_note_min":  0,       
+    "Mapping_THRUE":   0,     
+    "Lenght_pad_min":   0,
+    "Note_common":  0,
+    "Note_common_vel" :0,
+    
+    "Vel1":  0,                   
+    "Note1": 0,
+    "Note1_vel1":    0,
+    "Ch_n1": 0,
+    "Lenght_Note_1": 0,   
+
+    "Vel2":  0,                   
+    "Note2": 0,
+    "Note2_vel2":    0,
+    "Ch_n2": 0,
+    "Lenght_Note_2": 0,   
+
+    "Vel3":  0,                   
+    "Note3": 0,
+    "Note3_vel3":    0,
+    "Ch_n3": 0,
+    "Lenght_Note_3": 0,   
+
+    "Vel3":  0,                   
+    "Note3": 0,
+    "Note3_vel3":    0,
+    "Ch_n3": 0,
+    "Lenght_Note_3": 0   
+}
