@@ -18,7 +18,11 @@ body{
 .page-header span{
     color: white; 
 }
-
+#Logo{
+    display: block;
+    width: 350px;
+    float: left;
+}
 #profiles{
     width: 80%;
     height: 200px;
@@ -118,17 +122,15 @@ body{
     padding: 20px;
     background-color: #45a3b4;
 }
-#menu_profiles{
-    padding-top: 20px;
-}
 
 #menu_profiles{
     padding-top: 20px;
     /* width: 360px; */
+    height: 80px;
 }
 
 
-#menu_profiles select{
+#select_list_profiles {
     padding-top: 20px;
     line-height: 40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -137,8 +139,13 @@ body{
     font-weight: 700;
     color: rgb(0 111 131);
     width: 250px;
-    display: block;
+    /* display: block;
+    float: left; */
+    margin-left: 100px;
+
 }
+
+
 #menu_profiles input{
     font-weight: 700;
     width: 250px;
@@ -150,7 +157,30 @@ body{
     background-color: #286a76;
     color: white;
 }
+#menu_profiles input[type="submit"]:active,
+#menu_profiles input[type="button"]:active{
+    background-color: #ff8c00;
+}
+#menu_profiles input[type="submit"]:hover,
+#menu_profiles input[type="button"]:hover{
+    border-color: #f3a84d;
+    padding: 10px;
+}
 #panel_btn {
+    top: 0;
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
     
 /* width: 251px; */
+}
+
+@media (max-width:900px) {
+    #menu_profiles {
+
+        height: 140px;
+    }
+    #panel_btn {
+        top: 70px;
+    }
 }

@@ -1,6 +1,7 @@
 var json_profile_midi;
 var index_active_li_profile =1;
 var profile_midi_filename="";
+var DEFUALT_NAME_PROFILE = "profile_default.json_midi";
 
 onload_page();
 function input_change_value(name_input){
@@ -73,11 +74,11 @@ function httpGetAsync(theUrl, callback)
 function load_profiles_srv(){
     httpGetAsync('/list_profiles',r=>{
         document.getElementById("select_list_profiles").innerHTML ='<option index="-1" disabled>Выбирете профиль</option>';
-        var r_split = r.split("\n");
+        var r_split = r.replace('"','\n').split(",");
         var index =0;
         r_split.forEach(element => {
             console.log(element);
-            if (element !="")
+            if ((element !="") && ((element !="---")))
             {
                 index++;
                 if (index==1) document.getElementById("select_list_profiles").innerHTML += '<option selected index="'+index+'" >'+element+'</option>'; 
@@ -146,15 +147,15 @@ function select_profile(file_name){
 
 function profile_save(){
     httpPostAsync('/profile_save?file_name='+profile_midi_filename,JSON.stringify(json_profile_midi),r=>{
-        console.log(r);
+        //console.log(r);
+        alert(r);
     });
 }
 function profile_remove(){
-    if (profile_midi_filename === "profile_default.json_midi") alert("Нельзя удалять фаил по умолчанию!");
+    if (profile_midi_filename === DEFUALT_NAME_PROFILE) alert("Нельзя удалять фаил по умолчанию!");
     else{
-        httpGetAsync('/profile_remove?file_name='+profile_midi_filename,
-        r=>{
-
+        httpGetAsync('/profile_remove?file_name='+profile_midi_filename, r=>{
+            console.log(r);
         });
     }
     
@@ -163,10 +164,16 @@ function profile_add(){
     var defaultText = "file_name";
     var result_file_name =  window.prompt("Введите название нового файла", defaultText);   
     result_file_name += ".json_midi"; 
-    alert("Файли буде называться "+result_file_name);
+   // alert("Файли буде называться "+result_file_name);
     httpGetAsync('/profile_add?file_name='+result_file_name,r=>{
         console.log(r);
+        var rfn= '"'+result_file_name+'"';
+        var ansver = JSON.parse(r);
+        console.log("% \n"+ansver["list_profiles"]+"\n%");
+        alert (ansver["result_add"] == true ?  "Фаил "+rfn+" добавлен" :"Ошибка создания "+rfn);
+        
     });
+
 
 }
 

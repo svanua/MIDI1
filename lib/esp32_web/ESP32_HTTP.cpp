@@ -1,4 +1,5 @@
 #include <ESP32_HTTP.h>
+#include <ArduinoJson.h>
 
 #define FILE_SETTING_NAME "/setting.json"
 
@@ -33,8 +34,13 @@ void ESP32_HTTP_init(){
   (*_server).on("/profile_add",HTTP_GET, []() {
     
       Serial.printf("profile_add arg1 /%s \n",(*_server).arg(0).c_str());
-      bool result_remove = false;
-      (*_server).send(200,"text/plain",result_remove ? "true" : "false" );
+      
+      bool result_add = FS_Create_profile((*_server).arg(0));
+      String ansver ="{ \"result_add\":"+ String(result_add ? "true," : "false,")  
+                        +"\"list_profiles\": ["
+                             + FS_Read_midi_list() 
+                             + "] }";    
+      (*_server).send(200,"text/plain",ansver);
    });
 
   
@@ -44,22 +50,20 @@ void ESP32_HTTP_init(){
     // {
     //   Serial.printf("GetProfile Arg[%d]=%s",i,(*_server).arg(i).c_str());
     // }
-    String File_text = FS_Read_file("/"+(*_server).arg(0));
-    if ( File_text !="") (*_server).send(200,"text/plain", File_text);
-    else {handleNotFound(); }
-   
-  });
-
-  (*_server).on("/save_profile", HTTP_POST, []() {
-    if (FS_Write_file(FILE_SETTING_NAME, (*_server).arg(0))) 
+    String FileName = (*_server).arg(0);
+    if (strstr(FileName.c_str(),".json_midi")!=NULL)
     {
-        (*_server).send(200, "text/plain", String(FILE_SETTING_NAME) + String("save to flash"));
+      String File_text = FS_Read_file("/"+FileName);
+      
+      if ( File_text !="") (*_server).send(200,"text/plain", File_text);
+      else {handleNotFound(); }
     }
-    else {(*_server).send(404, "text/plain", String("Error write file to Flash!")+String(FILE_SETTING_NAME));}
+    else{
+      Serial.println("Error - get_profile get no '*.json_midi' file");
+    }
   });
-
-
 }
+
 
 String FS_Read_file(String path){
 static String result = "{\n}";
@@ -92,9 +96,22 @@ bool FS_Write_file(String filename,String json_str)
  return true;
 }
 
+bool FS_Create_profile(String filename)
+{
+  String p_note_block16 = "";
+  for (size_t i = 1; i < 16; i++)
+  {
+    p_note_block16 += p_note_json_def+',';
+  }
+  p_note_block16 += p_note_json_def;
+
+  String def_text_json = "{\n\"array_p\": [\n" + p_note_block16 +  "]\n}";                 
+  return FS_Write_file(filename,def_text_json);
+}
+
 String FS_Read_midi_list(){
-  String result="profile_default.json_midi\n";
-File root = FILESYSTEM.open("/");
+  String result="\"profile_default.json_midi\",\n";
+  File root = FILESYSTEM.open("/");
       File file = root.openNextFile();
       while(file){
           String fileName = file.name();
@@ -102,7 +119,7 @@ File root = FILESYSTEM.open("/");
           if ((strstr(fileName.c_str(),".json_midi") != NULL) && 
               (0!=strcmp(fileName.c_str(),"profile_default.json_midi"))) 
             {
-                result += fileName+"\n";
+                result += '"'+fileName+"\",\n";
                 Serial.printf("\tFS_File: %s\n", fileName.c_str());
             }
             else {
@@ -110,5 +127,6 @@ File root = FILESYSTEM.open("/");
             }
            file = root.openNextFile();
       }
+      result+= "\"---\"";
       return result;
 }
